@@ -21,7 +21,7 @@ Bu projede, Ankara'daki metro hatları üzerinde bir metro ağı simülasyonu ge
 📌 Temel Prensip:  
 BFS, başlangıç noktasından itibaren bir grafın tüm komşularını, sonra onların komşularını (yani seviyeye göre) sırayla ziyaret eder. Her bir düğümün hedefe olan uzaklığı eşitse (örneğin, bir gridde her hareketin maliyeti eşitse), BFS en kısa yolu bulur.
 
-🔧 Nasıl Çalışır?
+🔧 Nasıl Çalışır?  
 Kuyruğa (deque) başlangıç istasyonu ekler.
 Her adımda, mevcut istasyonun komşularını kontrol eder.
 Daha önce gidilmemiş istasyonlar kuyruk sonuna eklenir.
@@ -149,4 +149,4 @@ Görsel:![7a](https://github.com/user-attachments/assets/822da784-6957-4778-b61a
 # 5. Projeyi Geliştirme Fikirleri
 
 Gerçek Zamanlı Trafik Verisi: A* algoritması, anlık trafik veya bekleme süreleri ile entegre edilebilir.  
-Farklı Hesaplama Modları: Engelli dostu rota, az yürüme mesafesi, minimum yırıma gibi tercihler eklenebilir.  
+Farklı Hesaplama Modları: Engelli dostu rota, az yürüme mesafesi, minimum yürüme gibi tercihler eklenebilir.  
