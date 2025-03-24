@@ -19,6 +19,8 @@ Bu projede, Ankara'daki metro hatları üzerinde bir metro ağı simülasyonu ge
 
 # 3. Algoritmaların Çalışma Mantığı
 
+## BFS (Breadth First Search):
+
 📌 Temel Prensip:  
 BFS, başlangıç noktasından itibaren bir grafın tüm komşularını, sonra onların komşularını (yani seviyeye göre) sırayla ziyaret eder. Her bir düğümün hedefe olan uzaklığı eşitse (örneğin, bir gridde her hareketin maliyeti eşitse), BFS en kısa yolu bulur.
 
@@ -52,7 +54,7 @@ Son olarak kuyruktaki 4 ziyaret edilir → Output: [0, 2, 3, 1, 4]
 ---
 
 
-A* (A Yıldız) Algoritması - En Hızlı Rota
+## A* (A Yıldız) Algoritması - En Hızlı Rota
 
 📌 Temel Prensip:  
 A* algoritması, BFS gibi düğümleri genişletir ama bunu daha akıllı bir şekilde yapar. Hedefe daha yakın olan düğümleri öncelikli olarak arar. Bunu bir heuristic (sezgisel) ile sağlar. En kısa ve en verimli yolu bulmaya çalışır.  
@@ -94,7 +96,12 @@ En küçük f = 5, d seçilir.
 #### Hedefe Ulaşıldı:  
 d düğümüne ulaşıldı. Bu yol izlenmiştir:  
 s → b → d
-Toplam maliyet: s → b (2) + b → d (3) = 5
+Toplam maliyet: s → b (2) + b → d (3) = 5  
+
+---
+
+## Neden bu algoritmaları kullandık? 
+Bu projede amaç, metro güzergâhları arasında hem en az aktarma yapılan rotayı hem de en kısa sürede varış sağlayan rotayı belirlemekti. Bu iki farklı hedef için farklı algoritmalar tercih edilmesi gerekti. En az aktarma yapılan rotayı bulmak için Breadth-First Search (BFS) algoritmasını kullandık çünkü bu algoritma, bir noktadan başka bir noktaya en az adımda ulaşmayı garanti eder. Aktarmalar da bu adımlar olarak düşünüldüğünde, BFS ile yolculuk sırasında en az sayıda hat değiştirmeyi sağlayan rotaya ulaşmak mümkün oldu. En hızlı rotayı bulmak için ise A* algoritmasını kullandık. A*, sadece kenar ağırlıklarını değil, aynı zamanda hedefe olan tahmini uzaklığı da dikkate alarak daha akıllı bir arama gerçekleştirir. Bu özellik sayesinde, en kısa sürede ulaşılabilecek rotalar çok daha verimli şekilde hesaplanabilir.
 
 ---
 
