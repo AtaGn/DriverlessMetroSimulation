@@ -9,11 +9,8 @@ Bu projede, Ankara'daki metro hatları üzerinde bir metro ağı simülasyonu ge
 -> collections:  
   --> defaultdict: Hat bazlı istasyonları organize etmek için kullanıldı.  
   --> deque: BFS algoritmasında kuyruk veri yapısı olarak kullanıldı.  
-
 -> heapq: A* algoritması için öncelik kuyruğu (priority queue) olarak kullanıldı. En düşük maliyetli rotayı öncelikli seçer.  
-
 -> matplotlib.pyplot: Rotaların ve metro ağının grafiksel olarak gösterimi için kullanıldı.  
-
 -> networkx: Metro ağının çoklu yönlü grafik yapısı ile modellenmesi ve görselleştirilmesi sağlandı.
 
 
@@ -25,30 +22,20 @@ Bu projede, Ankara'daki metro hatları üzerinde bir metro ağı simülasyonu ge
 BFS, başlangıç noktasından itibaren bir grafın tüm komşularını, sonra onların komşularını (yani seviyeye göre) sırayla ziyaret eder. Her bir düğümün hedefe olan uzaklığı eşitse (örneğin, bir gridde her hareketin maliyeti eşitse), BFS en kısa yolu bulur.
 
 🔧 Nasıl Çalışır?
-
 Kuyruğa (deque) başlangıç istasyonu ekler.
-
 Her adımda, mevcut istasyonun komşularını kontrol eder.
-
 Daha önce gidilmemiş istasyonlar kuyruk sonuna eklenir.
-
 Hedef istasyona ulaşılırsa o ana kadarki yol dönülür.  
 
 Örnek:  
 ![image](https://github.com/user-attachments/assets/80037444-83f1-4efd-a795-086900225534)
 
 Başlangıçta 0 ziyaret edilir → Output: [0]  
-
 0'ın komşuları sırayla kuyruğa eklenir: 2, 3, 1  
-
 Kuyruktan ilk eleman 2 çıkarılır ve ziyaret edilir → Output: [0, 2]  
-
 2'nin komşusu olan 4 kuyruğa eklenir  
-
 Sıradaki eleman 3 ziyaret edilir → Output: [0, 2, 3]  
-
 Sıradaki eleman 1 ziyaret edilir → Output: [0, 2, 3, 1]  
-
 Son olarak kuyruktaki 4 ziyaret edilir → Output: [0, 2, 3, 1, 4]  
 
 ---
@@ -123,7 +110,6 @@ Görsel: ![2a](https://github.com/user-attachments/assets/d6d15809-c17e-4219-b5d
 
 En Hızlı Rota  
 Rota: AŞTİ → Kızılay → Kızılay (aktarma) → Ulus → Demetevler → OSB  
-
 Süre: 25 dakika  
 
 Görsel: ![3a](https://github.com/user-attachments/assets/f74aba83-c79f-467b-b4de-2543e39cab85)
@@ -139,7 +125,6 @@ Görsel:![4a](https://github.com/user-attachments/assets/4c5cddce-e081-4712-801e
 
 En Hızlı Rota  
 Rota: Batıkent → Demetevler → Gar → Keçiören  
-
 Süre: 21 dakika  
 
 Görsel:![5a](https://github.com/user-attachments/assets/7da157a0-1370-4e1a-b272-ed14cada330d)
@@ -155,7 +140,6 @@ Görsel:![6a](https://github.com/user-attachments/assets/61302001-9d8d-4971-bf78
 
 En Hızlı Rota  
 Rota: Keçiören → Gar → Gar (aktarma) → Sıhhiye → Kızılay → AŞTİ  
-
 Süre: 19 dakika  
 
 Görsel:![7a](https://github.com/user-attachments/assets/822da784-6957-4778-b61a-844f6195919f)
